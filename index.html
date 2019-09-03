@@ -5,7 +5,7 @@
 
 <head>
               
-  <title>Mandatendatabank</title>
+  <title>Besluit Publicatie</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -44,11 +44,11 @@
         <div class="layout layout--wide">
           <div class="grid u-hr">
             <div class="col--9-12 col--1-1--s">
-              <h1 class="h1">Mandatendatabank</h1>
+              <h1 class="h1">Besluit Publicatie</h1>
               <div class="head" role="contentinfo" id="respecHeader">
                 <dl>
                   <dt>Laatste aanpassing</dt>
-                  <dd>2019-05-13</dd>
+                  <dd>2019-07-25</dd>
 
                   
                   
@@ -405,10 +405,11 @@
             <div class="region" id="introduction">
               <div class="introduction typography">
               
-<p>Dit document beschrijft een <strong>applicatieprofiel</strong>, in dit geval <strong>Mandatendatabank</strong>.
+<p>Dit document beschrijft een <strong>applicatieprofiel</strong>, in dit geval <strong>Besluit Publicatie</strong>.
 Het applicatieprofiel is ontwikkeld binnen het project
 <a href="http://lokaalbestuur.vlaanderen.be/lokale-besluiten-als-gelinkte-open-data">Lokale Besluiten als Gelinkte
-Open Data</a> en laat toe om een gelinkte mandatendatabank op te zetten op basis van gelinkte besluiten.
+Open Data</a> en laat toe om de notulen en besluiten van een bestuursorgaan gelinkt op te maken,
+gelinkt authentiek te bewaren en gelinkt te ontsluiten.
 Het beantwoordt de vraag over hoe het corresponderende domeinmodel in de praktijk kan toegepast worden.
 Daarbij worden de beperkingen (kardinaliteit, codelijsten) toegelicht en de overeenkomstige (RDF) termen opgelijst.
 </p>
@@ -419,11 +420,14 @@ Daarbij worden de beperkingen (kardinaliteit, codelijsten) toegelicht en de over
             <div class="region region--no-space-top typography" id="summary">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Samenvatting</h2>
                 
-    <p>Het OSLO- Mandatendatabank applicatieprofiel is een profiel op bestaande vocabularia met betrekking tot het beschrijven van mandatarissen en hun mandaat. Het laat toe om een gelinkte mandatendatabank op te zetten op basis van gepubliceerde gelinkte besluiten.</p>
+    <p>Het OSLO- Besluit Publicatie applicatieprofiel is een profiel op bestaande vocabularia met betrekking tot de publicatie van besluiten als gelinkte open data.
+	</p>
 
-    <p>De Vlaamse regering wil dit applicatieprofiel verplicht maken via een Besluit van de Vlaamse Regering. Het applicatieprofiel omvat alle entiteiten en attributen die moeten ontsloten worden en laat toe een gelinkte mandatendatabank op te zetten.</p>
+	<p>Dit applicatieprofiel is ontwikkeld om besluiten die lokale besturen verplicht zijn om te publiceren (publicatieplicht) toe te laten om op een eenvoudige wijze te voldoen aan de meldingsplicht en om de besluiten ook gemakkelijker vindbaar te maken voor burgers. De Vlaamse regering wil dit applicatieprofiel verplicht maken via een Besluit van de Vlaamse Regering. Het applicatieprofiel omvat alle entiteiten en attributen die moeten ontsloten worden.</p>
 
-    <p>Het applicatieprofiel beschrijft mandatarissen en hun mandaten in verschillende bestuurseenheden en de bijbehorende bestuursorganen.</p>
+	<p>Het applicatieprofiel laat toe de zittingen, aanwezige mandatarissen, agendapunten en daaruitvolgende besluiten, met hun rechtsgronden en context, bij lokale besturen (steden, gemeentes en provincies) te beschrijven. Verder kan ook het resultaat van de stemming gecapteerd worden.</p>
+
+	<p>De kardinaliteiten zijn redelijk restrictief daar de structuur en inhoud van besluiten vastligt en gevolgd moet worden om rechtsgeldigheid te bekomen.</p>
 
             </div>
 
@@ -485,46 +489,534 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
                     <p>In dit document wordt correct gebruik van de volgende entiteiten toegelicht:
                       <br />
                       |
+                      <a href="#Agendapunt">Agendapunt</a> |
+                      <a href="#Agent">Agent</a> |
+                      <a href="#Artikel">Artikel</a> |
+                      <a href="#Behandeling van Agendapunt">Behandeling van Agendapunt</a> |
+                      <a href="#Besluit">Besluit</a> |
                       <a href="#Bestuurseenheid">Bestuurseenheid</a> |
                       <a href="#Bestuursorgaan">Bestuursorgaan</a> |
-                      <a href="#Bestuursorgaan (in bestuursperiode)">Bestuursorgaan (in bestuursperiode)</a> |
-                      <a href="#Fractie">Fractie</a> |
-                      <a href="#Geboorte">Geboorte</a> |
-                      <a href="#Kandidatenlijst">Kandidatenlijst</a> |
-                      <a href="#Lidmaatschap">Lidmaatschap</a> |
-                      <a href="#Mandaat">Mandaat</a> |
+                      <a href="#Document">Document</a> |
+                      <a href="#Documentonderdeel">Documentonderdeel</a> |
+                      <a href="#Legale Verschijningsvorm">Legale Verschijningsvorm</a> |
                       <a href="#Mandataris">Mandataris</a> |
-                      <a href="#Persoon">Persoon</a> |
                       <a href="#Rechtsgrond">Rechtsgrond</a> |
-                      <a href="#Rechtsgrond Aanstelling">Rechtsgrond Aanstelling</a> |
-                      <a href="#Rechtsgrond Beëindiging">Rechtsgrond Beëindiging</a> |
-                      <a href="#Rechtstreekse Verkiezing">Rechtstreekse Verkiezing</a> |
-                      <a href="#Verkiezingsresultaat">Verkiezingsresultaat</a> |
-                      <a href="#Versie">Versie</a> |
-                      <a href="#Versie volgens Geldige Tijd">Versie volgens Geldige Tijd</a> |
+                      <a href="#Rechtsgrond (Besluit)">Rechtsgrond (Besluit)</a> |
+                      <a href="#Rechtsgrondonderdeel">Rechtsgrondonderdeel</a> |
+                      <a href="#Rechtsgrondonderdeel (Artikel)">Rechtsgrondonderdeel (Artikel)</a> |
+                      <a href="#Stemming">Stemming</a> |
+                      <a href="#Vergaderactiviteit">Vergaderactiviteit</a> |
+                      <a href="#Zitting">Zitting</a> |
                     </p>
                   </div>
                   
-                  
-                  <div class="region region--no-space-top">
-                    <p> In dit document worden de volgende datatypes toegelicht:
-                      <br />
-                      |
-                      <a href="#Creatie">Creatie</a> |
-                      <a href="#Opheffing">Opheffing</a> |
-                    </p>
-                  </div>
                   
                 </div>
               </div>
             </div>
             <div class="region region--no-space-top">
-              <a href="html/overview.jpg" target="_blank">
-                 <img src="html/overview.jpg" />
+              <a href="/html/overview.jpg" target="_blank">
+                 <img src="/html/overview.jpg" />
               </a>
             </div>
             <div class="region region--no-space-top">
               <h2 class="h2">Entiteiten</h2>
+            </div>
+            
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Agendapunt"><a href="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-placement="right">Agendapunt</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Formeel aanvaard te behandelen onderwerp op een zitting.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Agendapunt%3Aaangebracht%20na">aangebracht na</a>, 
+                      <a href="#Agendapunt%3Abeschrijving">beschrijving</a>, 
+                      <a href="#Agendapunt%3Agepland%20openbaar">gepland openbaar</a>, 
+                      <a href="#Agendapunt%3Aheeft%20ontwerpbesluit">heeft ontwerpbesluit</a>, 
+                      <a href="#Agendapunt%3Arefereert%20aan">refereert aan</a>, 
+                      <a href="#Agendapunt%3Atitel">titel</a>, 
+                      <a href="#Agendapunt%3Atype">type</a>.</dd>
+                    
+                  </dl>
+                </div>
+                
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Agendapunt%3Aaangebracht%20na" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#aangebrachtNa">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#aangebrachtNa" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#aangebrachtNa" data-placement="right">
+                            aangebracht na</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-placement="right">Agendapunt</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">Het agendapunt dat op de agenda direct dit agendapunt voorafging.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Agendapunt%3Abeschrijving" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/description" data-toggle="tooltip" data-content="http://purl.org/dc/terms/description" data-placement="right">
+                            beschrijving</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">Korte beschrijving van het agendapunt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Agendapunt%3Agepland%20openbaar" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#geplandOpenbaar">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#geplandOpenbaar" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#geplandOpenbaar" data-placement="right">
+                            gepland openbaar</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#boolean" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">Boolean</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Geeft aan of het agendapunt al dan niet bedoeld is om openbaar te bespreken.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Agendapunt%3Aheeft%20ontwerpbesluit" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftOntwerpbesluit">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftOntwerpbesluit" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftOntwerpbesluit" data-placement="right">
+                            heeft ontwerpbesluit</a>
+                          </code>
+                        </td>
+                        <td><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een (mogelijks nog aan te vullen of aan te passen) ontwerp voor het besluit dat uit dit agendapunt zou voortkomen.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Agendapunt%3Arefereert%20aan" typeof="rdfs:Property" resource="http://purl.org/dc/terms/references">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/references" data-toggle="tooltip" data-content="http://purl.org/dc/terms/references" data-placement="right">
+                            refereert aan</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-placement="right">Agendapunt</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een ander agendapunt waarnaar verwezen wordt vanuit dit agendapunt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Agendapunt%3Atitel" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/title" data-toggle="tooltip" data-content="http://purl.org/dc/terms/title" data-placement="right">
+                            titel</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De naam van het agendapunt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Agendapunt%3Atype" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#Agendapunt.type">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#Agendapunt.type" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt.type" data-placement="right">
+                            type</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a></td>
+                        <td>1...*</td>
+                        <td property="rdfs:comment">Type van het agendapunt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Agent"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Iemand die of iets dat kan handelen of een effect kan teweeg brengen.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+                
+            </div>
+            
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Artikel"><a href="http://data.vlaanderen.be/ns/besluit#Artikel" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Artikel" data-placement="right">Artikel</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Formeel afgebakend onderdeel van een besluit,dat een of meer van de beoogde rechtsgevolgen beschrijft.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Artikel%3Anummer">nummer</a>, 
+                      <a href="#Artikel%3Arealiseert">realiseert</a>.</dd>
+                    
+                  </dl>
+                </div>
+                
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Artikel%3Anummer" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#number">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#number" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#number" data-placement="right">
+                            nummer</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het nummer van het artikel.</td>
+                        <td property="vann:usageNote">Voorbeeld voor onderscheid met titel te verduidelijken: &#39;Artikel 1&#39; is het nummer, &#39;Artikel 1 van het Gemeentedecreet&#39; is de titel.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Artikel%3Arealiseert" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#realizes">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#realizes" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#realizes" data-placement="right">
+                            realiseert</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalResourceSubdivision" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResourceSubdivision" data-placement="right">Rechtsgrondonderdeel (Artikel)</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De rechtsgrond beschreven door dit artikel.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Behandeling van Agendapunt"><a href="http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt" data-placement="right">Behandeling van Agendapunt</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>De uitvoering van de acties om een agendapunt te verwerken tijdens een zitting.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Behandeling%20van%20Agendapunt%3Agebeurt%20na">gebeurt na</a>, 
+                      <a href="#Behandeling%20van%20Agendapunt%3Ageeft%20aanleiding%20tot">geeft aanleiding tot</a>, 
+                      <a href="#Behandeling%20van%20Agendapunt%3Aheeft%20aanwezige">heeft aanwezige</a>, 
+                      <a href="#Behandeling%20van%20Agendapunt%3Aheeft%20onderwerp">heeft onderwerp</a>, 
+                      <a href="#Behandeling%20van%20Agendapunt%3Aheeft%20secretaris">heeft secretaris</a>, 
+                      <a href="#Behandeling%20van%20Agendapunt%3Aheeft%20stemming">heeft stemming</a>, 
+                      <a href="#Behandeling%20van%20Agendapunt%3Aheeft%20voorzitter">heeft voorzitter</a>, 
+                      <a href="#Behandeling%20van%20Agendapunt%3Aopenbaar">openbaar</a>.</dd>
+                    
+                  </dl>
+                </div>
+                
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Behandeling%20van%20Agendapunt%3Agebeurt%20na" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#gebeurtNa">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#gebeurtNa" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#gebeurtNa" data-placement="right">
+                            gebeurt na</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt" data-placement="right">BehandelingVanAgendapunt</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">Verwijzing naar het voorgaand behandeld agendapunt binnen dezelfde zitting. Laat toe om de volgorde van de behandelingen op te bouwen.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Behandeling%20van%20Agendapunt%3Ageeft%20aanleiding%20tot" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#generated">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/prov#generated" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#generated" data-placement="right">
+                            geeft aanleiding tot</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Besluit" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Besluit" data-placement="right">Besluit</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een besluit dat is opgemaakt naar aanleiding van de behandeling van het agendapunt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Behandeling%20van%20Agendapunt%3Aheeft%20aanwezige" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftAanwezige">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftAanwezige" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftAanwezige" data-placement="right">
+                            heeft aanwezige</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>1...*</td>
+                        <td property="rdfs:comment">Een mandataris (van het orgaan dat de zitting houdt) die aanwezig was tijdens (een deel van) de behandeling.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Behandeling%20van%20Agendapunt%3Aheeft%20onderwerp" typeof="rdfs:Property" resource="http://purl.org/dc/terms/subject">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/subject" data-toggle="tooltip" data-content="http://purl.org/dc/terms/subject" data-placement="right">
+                            heeft onderwerp</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-placement="right">Agendapunt</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het onderwerp van de activiteit.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Behandeling%20van%20Agendapunt%3Aheeft%20secretaris" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftSecretaris">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftSecretaris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftSecretaris" data-placement="right">
+                            heeft secretaris</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">De mandataris die de rol van secretaris heeft gedurende de behandeling van het agendapunt.</td>
+                        <td property="vann:usageNote">Verplicht te gebruiken wanneer de secretaris tijdens de behandeling van het agendapunt verschilt van de secretaris van de zitting; anders optioneel.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Behandeling%20van%20Agendapunt%3Aheeft%20stemming" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftStemming">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftStemming" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftStemming" data-placement="right">
+                            heeft stemming</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Stemming" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Stemming" data-placement="right">Stemming</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een stemming die plaatsvond tijdens de behandeling van het agendapunt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Behandeling%20van%20Agendapunt%3Aheeft%20voorzitter" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftVoorzitter">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftVoorzitter" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftVoorzitter" data-placement="right">
+                            heeft voorzitter</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">De mandataris die de rol als voorzitter heeft gedurende de behandeling van het agendapunt.</td>
+                        <td property="vann:usageNote">Verplicht te gebruiken wanneer de voorzitter tijdens de behandeling van het agendapunt verschilt van de voorzitter van de zitting; anders optioneel.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Behandeling%20van%20Agendapunt%3Aopenbaar" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#openbaar">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#openbaar" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#openbaar" data-placement="right">
+                            openbaar</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#boolean" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">Boolean</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Geeft aan of de bespreking effectief openbaar verlopen is.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Besluit"><a href="http://data.vlaanderen.be/ns/besluit#Besluit" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Besluit" data-placement="right">Besluit</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>De authentieke schriftelijke neerslag van een beslissing van een bestuursorgaan. Deze beslissing houdt een rechtshandeling in waarbij sprake is van een beoogd rechtsgevolg.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Besluit%3Abeschrijving">beschrijving</a>, 
+                      <a href="#Besluit%3Aciteeropschrift">citeeropschrift</a>, 
+                      <a href="#Besluit%3Amotivering">motivering</a>, 
+                      <a href="#Besluit%3Apublicatiedatum">publicatiedatum</a>, 
+                      <a href="#Besluit%3Arealiseert">realiseert</a>, 
+                      <a href="#Besluit%3Avolgt%20uit">volgt uit</a>.</dd>
+                    
+                  </dl>
+                </div>
+                
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Besluit%3Abeschrijving" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#description">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#description" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#description" data-placement="right">
+                            beschrijving</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">Een beknopte beschrijving van het besluit.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Besluit%3Aciteeropschrift" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#title_short">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#title_short" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#title_short" data-placement="right">
+                            citeeropschrift</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">De beknopte titel of officiële korte naam van een decreet, wet, besluit... Deze wordt officieel vastgelegd. Deze benaming wordt in de praktijk gebruikt om naar de rechtsgrond te verwijzen.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Besluit%3Amotivering" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#motivering">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#motivering" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#motivering" data-placement="right">
+                            motivering</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">TaalString</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Beschrijving van de juridische en feitelijke motivering achter de beslissing die wordt uitgedrukt in het besluit.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Besluit%3Apublicatiedatum" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#date_publication">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#date_publication" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#date_publication" data-placement="right">
+                            publicatiedatum</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">De officiële publicatiedatum van het besluit.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Besluit%3Arealiseert" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#realizes">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#realizes" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#realizes" data-placement="right">
+                            realiseert</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Rechtsgrond (Besluit)</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De rechtsgrond beschreven door dit besluit.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Besluit%3Avolgt%20uit" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#wasGeneratedBy">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/prov#wasGeneratedBy" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#wasGeneratedBy" data-placement="right">
+                            volgt uit</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt" data-placement="right">BehandelingVanAgendapunt</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De behandeling van het agendapunt die tot dit besluit heeft geleid.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
             </div>
             
             <div class="region region--no-space-top">
@@ -686,79 +1178,35 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Bestuursorgaan (in bestuursperiode)"><a href="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-placement="right">Bestuursorgaan (in bestuursperiode)</a></h3>
+              <h3 class="h3" id="Document"><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Een bestuursorgaan,beperkt tot een bepaalde bestuursperiode.</dd>
+                    <dt>Beschrijving</dt><dd>Een origineel werk in de brede zin (een verslag,een opname,een boek...).</dd>
                     
                     <dt>Eigenschappen</dt>
                     
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Bestuursorgaan%20%28in%20bestuursperiode%29%3Abevat">bevat</a>, 
-                      <a href="#Bestuursorgaan%20%28in%20bestuursperiode%29%3Ais%20tijdspecialisatie%20van">is tijdspecialisatie van</a>.</dd>
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
                     
                   </dl>
                 </div>
                 
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Bestuursorgaan%20%28in%20bestuursperiode%29%3Abevat" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasPost">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/org#hasPost" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#hasPost" data-placement="right">
-                            bevat</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandaat" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandaat" data-placement="right">Mandaat</a></td>
-                        <td>1...*</td>
-                        <td property="rdfs:comment">Een mandaat binnen het orgaan.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Bestuursorgaan%20%28in%20bestuursperiode%29%3Ais%20tijdspecialisatie%20van" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/generiek#isTijdspecialisatieVan">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/generiek#isTijdspecialisatieVan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#isTijdspecialisatieVan" data-placement="right">
-                            is tijdspecialisatie van</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-placement="right">Bestuursorgaan</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Duidt de bronentiteit aan waarvan deze entiteit een tijdsgebonden specialisatie is. De specialisatie stelt de bron voor gedurende een bepaalde periode.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Fractie"><a href="http://data.vlaanderen.be/ns/mandaat#Fractie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Fractie" data-placement="right">Fractie</a></h3>
+              <h3 class="h3" id="Documentonderdeel"><a href="https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel" data-placement="right">Documentonderdeel</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als Agent. Een organisatie heeft dikwijls een hiërarchische structuur.</dd>
+                    <dt>Beschrijving</dt><dd>Een apart onderdeel van een groter document of verzameld document.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Bv artikel,hoofdstuk,paragraaf...</dd>
                     
                     <dt>Eigenschappen</dt>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Fractie%3Anaam">naam</a>.</dd>
+                      <a href="#Documentonderdeel%3Ais%20deel%20van">is deel van</a>, 
+                      <a href="#Documentonderdeel%3Ais%20onderdeel%20van">is onderdeel van</a>, 
+                      <a href="#Documentonderdeel%3Anummer">nummer</a>, 
+                      <a href="#Documentonderdeel%3Atype">type</a>.</dd>
                     
                   </dl>
                 </div>
@@ -778,175 +1226,59 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
 
                     <tbody class="supertype">
                     
-                      <tr id="Fractie%3Anaam" typeof="rdfs:Property" resource="http://www.w3.org/ns/regorg#legalName">
+                      <tr id="Documentonderdeel%3Ais%20deel%20van" typeof="rdfs:Property" resource="http://purl.org/dc/terms/isPartOf">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/regorg#legalName" data-toggle="tooltip" data-content="http://www.w3.org/ns/regorg#legalName" data-placement="right">
-                            naam</a>
+                            <a href="http://purl.org/dc/terms/isPartOf" data-toggle="tooltip" data-content="http://purl.org/dc/terms/isPartOf" data-placement="right">
+                            is deel van</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">GetypeerdeString</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De formele naam van de fractie.</td>
+                        <td><a href="https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel" data-placement="right">DocumentOnderdeel</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">Een verwante bron waarin de beschreven bron fysiek of logisch is opgenomen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Geboorte"><a href="https://data.vlaanderen.be/ns/persoon#Geboorte" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/persoon#Geboorte" data-placement="right">Geboorte</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>Het ter wereld komen vd persoon.</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Geboorte%3Adatum">datum</a>.</dd>
-                    
-                  </dl>
-                </div>
-                
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Geboorte%3Adatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/persoon#datum">
+                      <tr id="Documentonderdeel%3Ais%20onderdeel%20van" typeof="rdfs:Property" resource="http://purl.org/dc/terms/isPartOf">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/persoon#datum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/persoon#datum" data-placement="right">
-                            datum</a>
+                            <a href="http://purl.org/dc/terms/isPartOf" data-toggle="tooltip" data-content="http://purl.org/dc/terms/isPartOf" data-placement="right">
+                            is onderdeel van</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De geboortedatum.</td>
+                        <td><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">Een verwante bron waarin de beschreven bron fysiek of logisch is opgenomen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Kandidatenlijst"><a href="http://data.vlaanderen.be/ns/mandaat#Kandidatenlijst" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Kandidatenlijst" data-placement="right">Kandidatenlijst</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>Lijst met kandidaten voor een verkiezing.</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Kandidatenlijst%3Abehoort%20tot">behoort tot</a>, 
-                      <a href="#Kandidatenlijst%3Aheeft%20kandidaat">heeft kandidaat</a>, 
-                      <a href="#Kandidatenlijst%3Alijstnaam">lijstnaam</a>, 
-                      <a href="#Kandidatenlijst%3Alijstnummer">lijstnummer</a>, 
-                      <a href="#Kandidatenlijst%3Alijsttype">lijsttype</a>.</dd>
-                    
-                  </dl>
-                </div>
-                
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Kandidatenlijst%3Abehoort%20tot" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#behoortTot">
+                      <tr id="Documentonderdeel%3Anummer" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/generiek#nummer">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#behoortTot" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#behoortTot" data-placement="right">
-                            behoort tot</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#RechtstreekseVerkiezing" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#RechtstreekseVerkiezing" data-placement="right">RechtstreekseVerkiezing</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De verkiezing waar de lijst onderdeel van is.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Kandidatenlijst%3Aheeft%20kandidaat" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#heeftKandidaat">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#heeftKandidaat" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#heeftKandidaat" data-placement="right">
-                            heeft kandidaat</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/ns/person#Person" data-toggle="tooltip" data-content="http://www.w3.org/ns/person#Person" data-placement="right">Persoon</a></td>
-                        <td>1...*</td>
-                        <td property="rdfs:comment">Een persoon die deel uitmaakt van de lijst.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Kandidatenlijst%3Alijstnaam" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#prefLabel">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/2004/02/skos/core#prefLabel" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#prefLabel" data-placement="right">
-                            lijstnaam</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De naam van de lijst onder dewelke de kandidaten gezamenlijk opkomen.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Kandidatenlijst%3Alijstnummer" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#lijstnummer">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#lijstnummer" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#lijstnummer" data-placement="right">
-                            lijstnummer</a>
+                            <a href="https://data.vlaanderen.be/ns/generiek#nummer" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#nummer" data-placement="right">
+                            nummer</a>
                           </code>
                         </td>
                         <td><a href="http://www.w3.org/2001/XMLSchema#integer" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">Integer</a></td>
                         <td>1</td>
-                        <td property="rdfs:comment">Het volgnummer van de lijst.</td>
+                        <td property="rdfs:comment">Nummer vh documentonderdeel.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Kandidatenlijst%3Alijsttype" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#lijsttype">
+                      <tr id="Documentonderdeel%3Atype" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#lijsttype" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#lijsttype" data-placement="right">
-                            lijsttype</a>
+                            <a href="http://purl.org/dc/terms/type" data-toggle="tooltip" data-content="http://purl.org/dc/terms/type" data-placement="right">
+                            type</a>
                           </code>
                         </td>
                         <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a></td>
                         <td>1</td>
-                        <td property="rdfs:comment">Het type van de lijst.</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="rdfs:comment">Aard van het documentonderdeel.</td>
+                        <td property="vann:usageNote">Bv artikel, paragraaf, hoofdstuk...</td>
                         <td></td>
                       </tr>
                     
@@ -957,17 +1289,22 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Lidmaatschap"><a href="http://www.w3.org/ns/org#Membership" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#Membership" data-placement="right">Lidmaatschap</a></h3>
+              <h3 class="h3" id="Legale Verschijningsvorm"><a href="http://data.europa.eu/eli/ontology#LegalExpression" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalExpression" data-placement="right">Legale Verschijningsvorm</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Geeft de kenmerken weer vh lidmaatschap van een Mandataris van een Fractie.</dd>
+                    <dt>Beschrijving</dt><dd>Een legale verschijningsvorm is een intellectuele realisatie van een rechtsgrond onder de vorm van een opeenvolging van tekens (meestal alphanumerieke tekens).</dd>
                     
                     <dt>Eigenschappen</dt>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Lidmaatschap%3Ais%20lidmaatschap%20bij">is lidmaatschap bij</a>, 
-                      <a href="#Lidmaatschap%3Alid">lid</a>, 
-                      <a href="#Lidmaatschap%3Alid%20gedurende">lid gedurende</a>.</dd>
+                      <a href="#Legale%20Verschijningsvorm%3Aciteert">citeert</a>, 
+                      <a href="#Legale%20Verschijningsvorm%3Acorrigeert">corrigeert</a>, 
+                      <a href="#Legale%20Verschijningsvorm%3Agecorrigeerd%20door">gecorrigeerd door</a>, 
+                      <a href="#Legale%20Verschijningsvorm%3Ainhoud">inhoud</a>, 
+                      <a href="#Legale%20Verschijningsvorm%3Ataal">taal</a>, 
+                      <a href="#Legale%20Verschijningsvorm%3Atitel">titel</a>, 
+                      <a href="#Legale%20Verschijningsvorm%3Averanderd%20door">veranderd door</a>, 
+                      <a href="#Legale%20Verschijningsvorm%3Averandert">verandert</a>.</dd>
                     
                   </dl>
                 </div>
@@ -987,108 +1324,114 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
 
                     <tbody class="supertype">
                     
-                      <tr id="Lidmaatschap%3Ais%20lidmaatschap%20bij" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#organization">
+                      <tr id="Legale%20Verschijningsvorm%3Aciteert" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#cites">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/org#organization" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#organization" data-placement="right">
-                            is lidmaatschap bij</a>
+                            <a href="http://data.europa.eu/eli/ontology#cites" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#cites" data-placement="right">
+                            citeert</a>
                           </code>
                         </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Fractie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Fractie" data-placement="right">Fractie</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De fractie waarvan de mandataris lid is.</td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalExpression" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalExpression" data-placement="right">LegaleVerschijningsvorm</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Lidmaatschap%3Alid" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#member">
+                      <tr id="Legale%20Verschijningsvorm%3Acorrigeert" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#corrects">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/org#member" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#member" data-placement="right">
-                            lid</a>
+                            <a href="http://data.europa.eu/eli/ontology#corrects" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#corrects" data-placement="right">
+                            corrigeert</a>
                           </code>
                         </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De mandataris van wie het lidmaatschap beschreven wordt.</td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalExpression" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalExpression" data-placement="right">LegaleVerschijningsvorm</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Duidt aan dat deze legale verschijningsvorm tekstuele veranderingen zonder legale impact aanbrengt in een andere legale verschijningsvorm.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Lidmaatschap%3Alid%20gedurende" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#memberDuring">
+                      <tr id="Legale%20Verschijningsvorm%3Agecorrigeerd%20door" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#corrected_by">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/org#memberDuring" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#memberDuring" data-placement="right">
-                            lid gedurende</a>
+                            <a href="http://data.europa.eu/eli/ontology#corrected_by" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#corrected_by" data-placement="right">
+                            gecorrigeerd door</a>
                           </code>
                         </td>
-                        <td><a href="http://data.europa.eu/m8g/PeriodOfTime" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/PeriodOfTime" data-placement="right">Tijdsinterval</a></td>
-                        <td>0...1</td>
-                        <td property="rdfs:comment">Periode waarin de Mandataris lid was vd Fractie.</td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalExpression" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalExpression" data-placement="right">LegaleVerschijningsvorm</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Duidt een legale verschijningsvorm aan die een tekstuele verandering zonder legale impact aan deze legale verschijningsvorm aanbrengt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Mandaat"><a href="http://data.vlaanderen.be/ns/mandaat#Mandaat" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandaat" data-placement="right">Mandaat</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>De bevoegdheid om gedurende een bepaalde periode een bestuursorgaan te vormen of er deel van uit te maken. Een mandaat kan één of meerdere zetels voorstellen.</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Mandaat%3Aaantal%20houders">aantal houders</a>, 
-                      <a href="#Mandaat%3Abestuursfunctie">bestuursfunctie</a>.</dd>
-                    
-                  </dl>
-                </div>
-                
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Mandaat%3Aaantal%20houders" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#aantalHouders">
+                      <tr id="Legale%20Verschijningsvorm%3Ainhoud" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#value">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#aantalHouders" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#aantalHouders" data-placement="right">
-                            aantal houders</a>
+                            <a href="http://www.w3.org/ns/prov#value" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#value" data-placement="right">
+                            inhoud</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#integer" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">Integer</a></td>
+                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">GetypeerdeString</a></td>
                         <td>1</td>
-                        <td property="rdfs:comment">Maximale aantal mandatarissen dat tegelijk dit mandaat kan opnemen.</td>
+                        <td property="rdfs:comment">De beschrijving van de beoogde rechtsgevolgen, het zogenaamde beschikkend gedeelte.</td>
+                        <td property="vann:usageNote">Bijvoorbeeld de beschrijving van een verkeersregel die wordt ingevoerd of de beslissing om een subsidie toe te kennen aan iemand.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Legale%20Verschijningsvorm%3Ataal" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#language">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#language" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#language" data-placement="right">
+                            taal</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Taalcode</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De taal van de verschijningsvorm.</td>
+                        <td property="vann:usageNote">Deze eigenschap is aanwezig voor compatibiliteit met European Legislation Identifier (ELI).</td>
+                        <td><a href="http://publications.europa.eu/mdr/authority/language/index.html">Link</a></td>
+                      </tr>
+                    
+                      <tr id="Legale%20Verschijningsvorm%3Atitel" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#title">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#title" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#title" data-placement="right">
+                            titel</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
+                        <td>1...*</td>
+                        <td property="rdfs:comment">Titel van de legale verschijningsvorm.</td>
+                        <td property="vann:usageNote">Voor een besluit is dit het opschrift, voor een artikel de benaming van het artikel.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Legale%20Verschijningsvorm%3Averanderd%20door" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#changed_by">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#changed_by" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#changed_by" data-placement="right">
+                            veranderd door</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalExpression" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalExpression" data-placement="right">LegaleVerschijningsvorm</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen heeft ondergaan door een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Mandaat%3Abestuursfunctie" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#role">
+                      <tr id="Legale%20Verschijningsvorm%3Averandert" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#changes">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/org#role" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#role" data-placement="right">
-                            bestuursfunctie</a>
+                            <a href="http://data.europa.eu/eli/ontology#changes" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#changes" data-placement="right">
+                            verandert</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/ns/org#Role" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#Role" data-placement="right">Rol</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Een code die de functie van het mandaat aangeeft.</td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalExpression" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalExpression" data-placement="right">LegaleVerschijningsvorm</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen doorvoert op een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1107,336 +1450,11 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
                     
                     <dt>Eigenschappen</dt>
                     
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Mandataris%3Abekleedt">bekleedt</a>, 
-                      <a href="#Mandataris%3Abeleidsdomein">beleidsdomein</a>, 
-                      <a href="#Mandataris%3Aeinde">einde</a>, 
-                      <a href="#Mandataris%3Aheeft%20lidmaatschap">heeft lidmaatschap</a>, 
-                      <a href="#Mandataris%3Ais%20aangesteld%20door">is aangesteld door</a>, 
-                      <a href="#Mandataris%3Ais%20bestuurlijke%20alias%20van">is bestuurlijke alias van</a>, 
-                      <a href="#Mandataris%3Ais%20ontslagen%20door">is ontslagen door</a>, 
-                      <a href="#Mandataris%3Ais%20tijdelijk%20vervangen%20door">is tijdelijk vervangen door</a>, 
-                      <a href="#Mandataris%3Arangorde">rangorde</a>, 
-                      <a href="#Mandataris%3Astart">start</a>, 
-                      <a href="#Mandataris%3Astatus">status</a>.</dd>
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
                     
                   </dl>
                 </div>
                 
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Mandataris%3Abekleedt" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#holds">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/org#holds" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#holds" data-placement="right">
-                            bekleedt</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandaat" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandaat" data-placement="right">Mandaat</a></td>
-                        <td>0...1</td>
-                        <td property="rdfs:comment">Het mandaat dat deze mandataris bekleedt.</td>
-                        <td property="vann:usageNote">Deze eigenschap is verplicht als de mandataris geen tijdelijke vervanger is van een andere mandataris.</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Abeleidsdomein" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#beleidsdomein">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#beleidsdomein" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#beleidsdomein" data-placement="right">
-                            beleidsdomein</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a></td>
-                        <td>0...1</td>
-                        <td property="rdfs:comment">Het thema of beleidsdomein dat toegewezen is aan een mandataris.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Aeinde" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#einde">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#einde" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#einde" data-placement="right">
-                            einde</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Tijdstip vanaf wanneer de mandataris het mandaat niet langer opneemt.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Aheeft%20lidmaatschap" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasMembership">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/org#hasMembership" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#hasMembership" data-placement="right">
-                            heeft lidmaatschap</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/ns/org#Membership" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#Membership" data-placement="right">Lidmaatschap</a></td>
-                        <td>0...1</td>
-                        <td property="rdfs:comment">Duidt een lidmaatschap aan van de mandataris.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Ais%20aangesteld%20door" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#isAangesteldDoor">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#isAangesteldDoor" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#isAangesteldDoor" data-placement="right">
-                            is aangesteld door</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#RechtsgrondAanstelling" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#RechtsgrondAanstelling" data-placement="right">RechtsgrondAanstelling</a></td>
-                        <td>1...*</td>
-                        <td property="rdfs:comment">De rechtsgrond die de aanstelling van de mandataris vastlegt.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Ais%20bestuurlijke%20alias%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#isBestuurlijkeAliasVan">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#isBestuurlijkeAliasVan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#isBestuurlijkeAliasVan" data-placement="right">
-                            is bestuurlijke alias van</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/ns/person#Person" data-toggle="tooltip" data-content="http://www.w3.org/ns/person#Person" data-placement="right">Persoon</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De persoon die de mandatarisrol vervult.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Ais%20ontslagen%20door" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#isOntslagenDoor">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#isOntslagenDoor" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#isOntslagenDoor" data-placement="right">
-                            is ontslagen door</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#RechtsgrondBeeindiging" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#RechtsgrondBeeindiging" data-placement="right">RechtsgrondBeeindiging</a></td>
-                        <td>0...*</td>
-                        <td property="rdfs:comment">De rechtsgrond die het ontslag van de mandataris vastlegt.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Ais%20tijdelijk%20vervangen%20door" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#isTijdelijkVervangenDoor">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#isTijdelijkVervangenDoor" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#isTijdelijkVervangenDoor" data-placement="right">
-                            is tijdelijk vervangen door</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
-                        <td>0...*</td>
-                        <td property="rdfs:comment">Duidt een mandataris aan die tijdelijk de uitvoering van het mandaat heeft overgenomen.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Arangorde" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#rangorde">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#rangorde" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#rangorde" data-placement="right">
-                            rangorde</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">TaalString</a></td>
-                        <td>0...1</td>
-                        <td property="rdfs:comment">Duidt de plaats van de mandataris aan in de formeel vastgelegde volgorde van de mandatarissen binnen het bestuursorgaan waar de mandataris in zetelt.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Astart" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#start">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#start" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#start" data-placement="right">
-                            start</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Tijdstip vanaf wanneer de mandataris het mandaat opneemt.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Mandataris%3Astatus" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#status">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#status" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#status" data-placement="right">
-                            status</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De gesteldheid van de mandataris.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Persoon"><a href="http://www.w3.org/ns/person#Person" data-toggle="tooltip" data-content="http://www.w3.org/ns/person#Person" data-placement="right">Persoon</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>Natuurlijk persoon.</dd>
-                    
-                    <dt>Gebruik</dt><dd>In de rechtspraak betreft het een persoon (in de wettelijke betekenis, ttz met eigen rechtspersoonlijkheid) van de menselijke soort, ttz een fysiek persoon. Tegenhanger is de rechtspersoon, een juridische constructie die een private of publieke Organisatie dezelfde rechtspersoonlijkheid geeft als een natuurlijk persoon (kan bv ook schulden hebben, contracten afsluiten, aangeklaagd worden etc).</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Persoon%3Aachternaam">achternaam</a>, 
-                      <a href="#Persoon%3Aalternatieve%20naam">alternatieve naam</a>, 
-                      <a href="#Persoon%3Agebruikte%20voornaam">gebruikte voornaam</a>, 
-                      <a href="#Persoon%3Ageslacht">geslacht</a>, 
-                      <a href="#Persoon%3Aheeft%20geboorte">heeft geboorte</a>, 
-                      <a href="#Persoon%3Aidentificator">identificator</a>, 
-                      <a href="#Persoon%3Ais%20aangesteld%20als">is aangesteld als</a>.</dd>
-                    
-                  </dl>
-                </div>
-                
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Persoon%3Aachternaam" typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/familyName">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://xmlns.com/foaf/0.1/familyName" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/familyName" data-placement="right">
-                            achternaam</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De familienaam van de persoon.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Persoon%3Aalternatieve%20naam" typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/name">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://xmlns.com/foaf/0.1/name" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/name" data-placement="right">
-                            alternatieve naam</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
-                        <td>0...1</td>
-                        <td property="rdfs:comment">Een roepnaam van de persoon.</td>
-                        <td property="vann:usageNote">Indien aanwezig is het aan te raden deze naam te gebruiken voor visualisaties in plaats van voornaam en familienaam.</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Persoon%3Agebruikte%20voornaam" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/persoon#gebruikteVoornaam">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/persoon#gebruikteVoornaam" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/persoon#gebruikteVoornaam" data-placement="right">
-                            gebruikte voornaam</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De te gebruiken voornaam van alle officiële voornamen van de persoon.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Persoon%3Ageslacht" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/persoon#geslacht">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/persoon#geslacht" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/persoon#geslacht" data-placement="right">
-                            geslacht</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Geslacht</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Het officiële geslacht van de persoon.</td>
-                        <td property="vann:usageNote"></td>
-                        <td><a href="http://publications.europa.eu/mdr/authority/human-sex/">Link</a></td>
-                      </tr>
-                    
-                      <tr id="Persoon%3Aheeft%20geboorte" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/persoon#heeftGeboorte">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/persoon#heeftGeboorte" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/persoon#heeftGeboorte" data-placement="right">
-                            heeft geboorte</a>
-                          </code>
-                        </td>
-                        <td><a href="https://data.vlaanderen.be/ns/persoon#Geboorte" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/persoon#Geboorte" data-placement="right">Geboorte</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Duidt de geboorte van de persoon aan.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Persoon%3Aidentificator" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#identifier">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/adms#identifier" data-toggle="tooltip" data-content="http://www.w3.org/ns/adms#identifier" data-placement="right">
-                            identificator</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/ns/adms#Identifier" data-toggle="tooltip" data-content="http://www.w3.org/ns/adms#Identifier" data-placement="right">Identificator</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Een identificator van de persoon.</td>
-                        <td property="vann:usageNote">Zie https://data.vlaanderen.be/doc/applicatieprofiel/generiek#Identificator.</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Persoon%3Ais%20aangesteld%20als" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#isAangesteldAls">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#isAangesteldAls" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#isAangesteldAls" data-placement="right">
-                            is aangesteld als</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
-                        <td>1...*</td>
-                        <td property="rdfs:comment">Een mandatarisrol die eigen is aan de persoon.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
             </div>
             
             <div class="region region--no-space-top">
@@ -1451,8 +1469,14 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Rechtsgrond%3Abuitenwerkingtreding">buitenwerkingtreding</a>, 
+                      <a href="#Rechtsgrond%3Aciteert">citeert</a>, 
+                      <a href="#Rechtsgrond%3Acorrigeert">corrigeert</a>, 
+                      <a href="#Rechtsgrond%3Agecorrigeerd%20door">gecorrigeerd door</a>, 
+                      <a href="#Rechtsgrond%3Aheeft%20bijlage">heeft bijlage</a>, 
                       <a href="#Rechtsgrond%3Ainwerkingtreding">inwerkingtreding</a>, 
-                      <a href="#Rechtsgrond%3Atype%20document">type document</a>.</dd>
+                      <a href="#Rechtsgrond%3Atype%20document">type document</a>, 
+                      <a href="#Rechtsgrond%3Averanderd%20door">veranderd door</a>, 
+                      <a href="#Rechtsgrond%3Averandert">verandert</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1486,6 +1510,62 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
                         <td></td>
                       </tr>
                     
+                      <tr id="Rechtsgrond%3Aciteert" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#cites">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#cites" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#cites" data-placement="right">
+                            citeert</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Rechtsgrond</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Rechtsgrond%3Acorrigeert" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#corrects">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#corrects" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#corrects" data-placement="right">
+                            corrigeert</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Rechtsgrond</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Duidt aan dat deze rechtsgrond tekstuele veranderingen zonder legale impact aanbrengt in een andere rechtsgrond.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Rechtsgrond%3Agecorrigeerd%20door" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#corrected_by">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#corrected_by" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#corrected_by" data-placement="right">
+                            gecorrigeerd door</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Rechtsgrond</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Duidt een rechtsgrond aan die een tekstuele verandering zonder legale impact aan deze rechtsgrond aanbrengt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Rechtsgrond%3Aheeft%20bijlage" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#cites">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#cites" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#cites" data-placement="right">
+                            heeft bijlage</a>
+                          </code>
+                        </td>
+                        <td><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een bijlage waarnaar verwezen wordt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="Rechtsgrond%3Ainwerkingtreding" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#first_date_entry_in_force">
                         <td>
                           <code property="rdfs:label">
@@ -1514,6 +1594,34 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
                         <td></td>
                       </tr>
                     
+                      <tr id="Rechtsgrond%3Averanderd%20door" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#changed_by">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#changed_by" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#changed_by" data-placement="right">
+                            veranderd door</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Rechtsgrond</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Duidt aan dat deze rechtsgrond een verandering met legale gevolgen heeft ondergaan door een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Rechtsgrond%3Averandert" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#changes">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#changes" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#changes" data-placement="right">
+                            verandert</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Rechtsgrond</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Duidt aan dat deze rechtsgrond een verandering met legale gevolgen doorvoert op een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
                     </tbody>
                   </table>
                 </div>
@@ -1521,15 +1629,16 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Rechtsgrond Aanstelling"><a href="http://data.vlaanderen.be/ns/mandaat#RechtsgrondAanstelling" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#RechtsgrondAanstelling" data-placement="right">Rechtsgrond Aanstelling</a></h3>
+              <h3 class="h3" id="Rechtsgrond (Besluit)"><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Rechtsgrond (Besluit)</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>De regelgeving,rechtshandeling en/of beleidskeuze waardoor de invulling van een of meerdere mandaten door een persoon vanaf een bepaalde datum (tijdelijk) start.</dd>
+                    <dt>Beschrijving</dt><dd>Het legale concept van een besluit dat los staat van een bepaalde vorm (het achterliggende idee).</dd>
                     
                     <dt>Eigenschappen</dt>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Rechtsgrond%20Aanstelling%3Abekrachtigt%20aanstelling%20van">bekrachtigt aanstelling van</a>.</dd>
+                      <a href="#Rechtsgrond%20%28Besluit%29%3Aaangenomen%20door">aangenomen door</a>, 
+                      <a href="#Rechtsgrond%20%28Besluit%29%3Aheeft%20deel">heeft deel</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1549,16 +1658,30 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
 
                     <tbody class="supertype">
                     
-                      <tr id="Rechtsgrond%20Aanstelling%3Abekrachtigt%20aanstelling%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#bekrachtigtAanstellingVan">
+                      <tr id="Rechtsgrond%20%28Besluit%29%3Aaangenomen%20door" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#passed_by">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#bekrachtigtAanstellingVan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#bekrachtigtAanstellingVan" data-placement="right">
-                            bekrachtigt aanstelling van</a>
+                            <a href="http://data.europa.eu/eli/ontology#passed_by" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#passed_by" data-placement="right">
+                            aangenomen door</a>
                           </code>
                         </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-placement="right">Bestuursorgaan</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het orgaan dat de rechtsgrond heeft goedgekeurd, waardoor er een rechtsgevolg ontstond.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Rechtsgrond%20%28Besluit%29%3Aheeft%20deel" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#has_part">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/eli/ontology#has_part" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#has_part" data-placement="right">
+                            heeft deel</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalResourceSubdivision" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResourceSubdivision" data-placement="right">Rechtsgrondonderdeel (Artikel)</a></td>
                         <td>1...*</td>
-                        <td property="rdfs:comment">De mandataris wiens aanstelling is bekrachtigd.</td>
+                        <td property="rdfs:comment">Duidt een artikel aan van dit besluit.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1570,326 +1693,10 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Rechtsgrond Beëindiging"><a href="http://data.vlaanderen.be/ns/mandaat#RechtsgrondBeeindiging" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#RechtsgrondBeeindiging" data-placement="right">Rechtsgrond Beëindiging</a></h3>
+              <h3 class="h3" id="Rechtsgrondonderdeel"><a href="http://data.europa.eu/eli/ontology#LegalResourceSubdivision" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResourceSubdivision" data-placement="right">Rechtsgrondonderdeel</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>De regelgeving,rechtshandeling en/of beleidskeuze waardoor de invulling van één of meerdere mandaten door een persoon vanaf een bepaalde datum (tijdelijk) beëindigd wordt.</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Rechtsgrond%20Be%C3%ABindiging%3Abekrachtigt%20ontslag%20van">bekrachtigt ontslag van</a>, 
-                      <a href="#Rechtsgrond%20Be%C3%ABindiging%3Areden%20van%20be%C3%ABindiging">reden van beëindiging</a>.</dd>
-                    
-                  </dl>
-                </div>
-                
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Rechtsgrond%20Be%C3%ABindiging%3Abekrachtigt%20ontslag%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#bekrachtigtOntslagVan">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#bekrachtigtOntslagVan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#bekrachtigtOntslagVan" data-placement="right">
-                            bekrachtigt ontslag van</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
-                        <td>1...*</td>
-                        <td property="rdfs:comment">De mandataris wiens ontslag is bekrachtigd.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Rechtsgrond%20Be%C3%ABindiging%3Areden%20van%20be%C3%ABindiging" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#redenVanBeeindiging">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#redenVanBeeindiging" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#redenVanBeeindiging" data-placement="right">
-                            reden van beëindiging</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De reden waarom deze rechtsgrond werd beëindigd.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Rechtstreekse Verkiezing"><a href="http://data.vlaanderen.be/ns/mandaat#RechtstreekseVerkiezing" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#RechtstreekseVerkiezing" data-placement="right">Rechtstreekse Verkiezing</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>De uitvoering van een formele procedure waarbij stemgerechtigde burgers bepalen aan welke persoon een mandaat kan worden toegekend.</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Rechtstreekse%20Verkiezing%3Adatum">datum</a>, 
-                      <a href="#Rechtstreekse%20Verkiezing%3Ageldigheid">geldigheid</a>, 
-                      <a href="#Rechtstreekse%20Verkiezing%3Astelt%20samen">stelt samen</a>.</dd>
-                    
-                  </dl>
-                </div>
-                
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Rechtstreekse%20Verkiezing%3Adatum" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#datum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#datum" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#datum" data-placement="right">
-                            datum</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Datum waarop de verkiezing plaatsvond.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Rechtstreekse%20Verkiezing%3Ageldigheid" typeof="rdfs:Property" resource="http://purl.org/dc/terms/valid">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/valid" data-toggle="tooltip" data-content="http://purl.org/dc/terms/valid" data-placement="right">
-                            geldigheid</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Datum waarop de verkiezing geldig verklaard werd.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Rechtstreekse%20Verkiezing%3Astelt%20samen" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#steltSamen">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#steltSamen" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#steltSamen" data-placement="right">
-                            stelt samen</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-placement="right">Bestuursorgaan (in bestuursperiode)</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Het orgaan waarvan de samenstelling wordt bepaald door de verkiezing.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Verkiezingsresultaat"><a href="http://data.vlaanderen.be/ns/mandaat#Verkiezingsresultaat" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Verkiezingsresultaat" data-placement="right">Verkiezingsresultaat</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>Individuele verkiezingsuitslag van een kandidaat.</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Verkiezingsresultaat%3Aaantal%20naamstemmen">aantal naamstemmen</a>, 
-                      <a href="#Verkiezingsresultaat%3Agevolg">gevolg</a>, 
-                      <a href="#Verkiezingsresultaat%3Ais%20resultaat%20van">is resultaat van</a>, 
-                      <a href="#Verkiezingsresultaat%3Ais%20resultaat%20voor">is resultaat voor</a>, 
-                      <a href="#Verkiezingsresultaat%3Aplaats%20rangorde">plaats rangorde</a>.</dd>
-                    
-                  </dl>
-                </div>
-                
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Verkiezingsresultaat%3Aaantal%20naamstemmen" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#aantalNaamstemmen">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#aantalNaamstemmen" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#aantalNaamstemmen" data-placement="right">
-                            aantal naamstemmen</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#integer" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">Integer</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Het aantal stemmen dat is uitgebracht op de kandidaat bij de verkiezing, zonder de lijststemmen in rekening te brengen.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Verkiezingsresultaat%3Agevolg" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#gevolg">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#gevolg" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#gevolg" data-placement="right">
-                            gevolg</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Persoonlijk gevolg van de uitslag voor de kandidaat dat vastlegt of de kandidaat al dan niet kan deelnemen aan het bestuursorgaan.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Verkiezingsresultaat%3Ais%20resultaat%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#isResultaatVan">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#isResultaatVan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#isResultaatVan" data-placement="right">
-                            is resultaat van</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/ns/person#Person" data-toggle="tooltip" data-content="http://www.w3.org/ns/person#Person" data-placement="right">Persoon</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De persoon horende bij het resultaat.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Verkiezingsresultaat%3Ais%20resultaat%20voor" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#isResultaatVoor">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#isResultaatVoor" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#isResultaatVoor" data-placement="right">
-                            is resultaat voor</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Kandidatenlijst" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Kandidatenlijst" data-placement="right">Kandidatenlijst</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De lijst waarop het resultaat betrekking heeft.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Verkiezingsresultaat%3Aplaats%20rangorde" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/mandaat#plaatsRangorde">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/mandaat#plaatsRangorde" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#plaatsRangorde" data-placement="right">
-                            plaats rangorde</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#integer" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">Integer</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De positie in de volgorde op de lijst van effectief verkozenen of op de lijst van opvolgers, op basis van het aantal naamstemmen van de kandidaat plus het aantal overgedragen lijststemmen.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Versie"><a href="https://data.vlaanderen.be/ns/generiek#Versie" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#Versie" data-placement="right">Versie</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>Stelt een entiteit voor in één specifieke periode.</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Versie%3Acreatie">creatie</a>, 
-                      <a href="#Versie%3Aopheffing">opheffing</a>.</dd>
-                    
-                  </dl>
-                </div>
-                
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Versie%3Acreatie" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#qualifiedGeneration">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/prov#qualifiedGeneration" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#qualifiedGeneration" data-placement="right">
-                            creatie</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/ns/prov#Generation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Generation" data-placement="right">Creatie</a></td>
-                        <td>0...1</td>
-                        <td property="rdfs:comment">Beschrijving vh ontstaan vd versie.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Versie%3Aopheffing" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#qualifiedInvalidation">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/prov#qualifiedInvalidation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#qualifiedInvalidation" data-placement="right">
-                            opheffing</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/ns/prov#Invalidation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Invalidation" data-placement="right">Opheffing</a></td>
-                        <td>0...1</td>
-                        <td property="rdfs:comment">Beschrijving vh verdwijnen vd versie.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Versie volgens Geldige Tijd"><a href="https://data.vlaanderen.be/ns/generiek#VersieVolgensGeldigeTijd" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#VersieVolgensGeldigeTijd" data-placement="right">Versie volgens Geldige Tijd</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>De versie stelt de entiteit voor gedurende een bepaalde periode in de gemodelleerde werkelijkheid.</dd>
+                    <dt>Beschrijving</dt><dd>Een deel van een rechtsgrond,op een arbitrair niveau van precisie,zoals een hoofdstuk,artikel,paragraaf of lijst element.</dd>
                     
                     <dt>Eigenschappen</dt>
                     
@@ -1900,24 +1707,16 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
                 
             </div>
             
-
-            
             <div class="region region--no-space-top">
-              <h2 class="h2">Datatypes</h2>
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Creatie"><a href="http://www.w3.org/ns/prov#Generation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Generation" data-placement="right">Creatie</a></h3>
+              <h3 class="h3" id="Rechtsgrondonderdeel (Artikel)"><a href="http://data.europa.eu/eli/ontology#LegalResourceSubdivision" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResourceSubdivision" data-placement="right">Rechtsgrondonderdeel (Artikel)</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Het voltooien vd productie ve nieuwe entiteit dmv een activiteit.</dd>
-                    
-                    <dt>Gebruik</dt><dd>De entiteit bestond niet voorafgaand aan de creatie en is daarna beschikbaar voor gebruik.</dd>
+                    <dt>Beschrijving</dt><dd>et legale concept van een artikel dat los staat van een bepaalde vorm (het achterliggende idee).</dd>
                     
                     <dt>Eigenschappen</dt>
                     
-                    <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Creatie%3Atijdstip">tijdstip</a>.</dd>
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Rechtsgrondonderdeel%20%28Artikel%29%3Ais%20deel%20van">is deel van</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1936,38 +1735,47 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
                     </thead>
 
                     <tbody class="supertype">
-                      
-                      <tr id="Creatie%3Atijdstip" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#atTime">
+                    
+                      <tr id="Rechtsgrondonderdeel%20%28Artikel%29%3Ais%20deel%20van" typeof="rdfs:Property" resource="http://data.europa.eu/eli/ontology#is_part_of">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/prov#atTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#atTime" data-placement="right">tijdstip</a>
+                            <a href="http://data.europa.eu/eli/ontology#is_part_of" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#is_part_of" data-placement="right">
+                            is deel van</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
+                        <td><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Rechtsgrond (Besluit)</a></td>
                         <td>1</td>
-                        <td property="rdfs:comment">De start van de periode waarover de versie gedefinieerd is.</td>
+                        <td property="rdfs:comment">Het besluit waar dit artikel onderdeel van is.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
-                      
+                    
                     </tbody>
                   </table>
                 </div>
-                
+      			  
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Opheffing"><a href="http://www.w3.org/ns/prov#Invalidation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Invalidation" data-placement="right">Opheffing</a></h3>
+              <h3 class="h3" id="Stemming"><a href="http://data.vlaanderen.be/ns/besluit#Stemming" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Stemming" data-placement="right">Stemming</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Het starten vh vernietigen/beëindigen/uitdoven ve entiteit dmv een activiteit.</dd>
-                    
-                    <dt>Gebruik</dt><dd>De entiteit is daarna niet meer beschikbaar voor gebruik of kan daarna niet meer vervallen. Gebruik of creatie gaan aan opheffing vooraf.</dd>
+                    <dt>Beschrijving</dt><dd>Geformaliseerde handeling waarbij de stemgerechtigde leden van een bestuursorgaan hun keuze te kennen geven.</dd>
                     
                     <dt>Eigenschappen</dt>
                     
-                    <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Opheffing%3Atijdstip">tijdstip</a>.</dd>
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Stemming%3Aaantal%20onthouders">aantal onthouders</a>, 
+                      <a href="#Stemming%3Aaantal%20tegenstanders">aantal tegenstanders</a>, 
+                      <a href="#Stemming%3Aaantal%20voorstanders">aantal voorstanders</a>, 
+                      <a href="#Stemming%3Ageheim">geheim</a>, 
+                      <a href="#Stemming%3Agevolg">gevolg</a>, 
+                      <a href="#Stemming%3Aheeft%20aanwezige">heeft aanwezige</a>, 
+                      <a href="#Stemming%3Aheeft%20onthouder">heeft onthouder</a>, 
+                      <a href="#Stemming%3Aheeft%20stemmer">heeft stemmer</a>, 
+                      <a href="#Stemming%3Aheeft%20tegenstander">heeft tegenstander</a>, 
+                      <a href="#Stemming%3Aheeft%20voorstander">heeft voorstander</a>, 
+                      <a href="#Stemming%3Aonderwerp">onderwerp</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1986,31 +1794,421 @@ Modellicentie Gratis Hergebruik - v1.0</a>.</p>
                     </thead>
 
                     <tbody class="supertype">
-                      
-                      <tr id="Opheffing%3Atijdstip" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#atTime">
+                    
+                      <tr id="Stemming%3Aaantal%20onthouders" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#aantalOnthouders">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/prov#atTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#atTime" data-placement="right">tijdstip</a>
+                            <a href="http://data.vlaanderen.be/ns/besluit#aantalOnthouders" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#aantalOnthouders" data-placement="right">
+                            aantal onthouders</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#integer" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">Integer</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het aantal stemmers dat als onthouding heeft gestemd.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Aaantal%20tegenstanders" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#aantalTegenstanders">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#aantalTegenstanders" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#aantalTegenstanders" data-placement="right">
+                            aantal tegenstanders</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#integer" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">Integer</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het aantal stemmers dat als tegenstander heeft gestemd.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Aaantal%20voorstanders" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#aantalVoorstanders">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#aantalVoorstanders" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#aantalVoorstanders" data-placement="right">
+                            aantal voorstanders</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#integer" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">Integer</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het aantal stemmers dat als voorstander heeft gestemd.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Ageheim" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#geheim">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#geheim" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#geheim" data-placement="right">
+                            geheim</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#boolean" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">Boolean</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Geeft aan of de stemming geheim was. Bij een geheime stemming wordt niet individueel bekend gemaakt wie op wat heeft gestemd.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Agevolg" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#gevolg">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#gevolg" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#gevolg" data-placement="right">
+                            gevolg</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">TaalString</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het gevolg van de stemming.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Aheeft%20aanwezige" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftAanwezige">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftAanwezige" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftAanwezige" data-placement="right">
+                            heeft aanwezige</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>1...*</td>
+                        <td property="rdfs:comment">Een mandataris (van het orgaan dat de zitting houdt) die aanwezig was tijdens de stemming.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Aheeft%20onthouder" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftOnthouder">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftOnthouder" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftOnthouder" data-placement="right">
+                            heeft onthouder</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een mandataris die als onthouder heeft gestemd op het onderwerp van de stemming.</td>
+                        <td property="vann:usageNote">Dit omvat ook ongeldige stemmen, blanco stemmen of het weigeren om deel te nemen aan de stemming.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Aheeft%20stemmer" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftStemmer">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftStemmer" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftStemmer" data-placement="right">
+                            heeft stemmer</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>1...*</td>
+                        <td property="rdfs:comment">Een mandataris die deelneemt aan de stemming.</td>
+                        <td property="vann:usageNote">In geval van een niet-geheime stemming kunnen de meer gespecialisseerde versies (bvb. heeft voorstander) gebruikt worden.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Aheeft%20tegenstander" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftTegenstander">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftTegenstander" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftTegenstander" data-placement="right">
+                            heeft tegenstander</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een mandataris die als tegenstander heeft gestemd op het onderwerp van de stemming.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Aheeft%20voorstander" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftVoorstander">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftVoorstander" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftVoorstander" data-placement="right">
+                            heeft voorstander</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een mandataris die als voorstander heeft gestemd op het onderwerp van de stemming.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stemming%3Aonderwerp" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#onderwerp">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#onderwerp" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#onderwerp" data-placement="right">
+                            onderwerp</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">TaalString</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De beschrijving van het onderwerp waarover de stemming gaat.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Vergaderactiviteit"><a href="http://data.vlaanderen.be/ns/besluit#Vergaderactiviteit" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Vergaderactiviteit" data-placement="right">Vergaderactiviteit</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Een vergadering of fase ervan.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Vergaderactiviteit%3Aheeft%20aanwezige">heeft aanwezige</a>.</dd>
+                    
+                  </dl>
+                </div>
+                
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Vergaderactiviteit%3Aheeft%20aanwezige" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftAanwezige">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftAanwezige" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftAanwezige" data-placement="right">
+                            heeft aanwezige</a>
+                          </code>
+                        </td>
+                        <td><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een agent (bvb: mandataris) die aanwezig was tijdens (een deel van) de activiteit waar hij een zekere verantwoordelijkheid had.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Zitting"><a href="http://data.vlaanderen.be/ns/besluit#Zitting" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Zitting" data-placement="right">Zitting</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Een geformaliseerde samenkomst van de leden van een bestuursorgaan met het doel om de aangelegenheden te regelen waarvoor het bevoegd is.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Zitting%3Abehandelt">behandelt</a>, 
+                      <a href="#Zitting%3Ageplande%20start">geplande start</a>, 
+                      <a href="#Zitting%3Agestart%20op%20tijdstip">gestart op tijdstip</a>, 
+                      <a href="#Zitting%3Age%C3%ABindigd%20op%20tijdstip">geëindigd op tijdstip</a>, 
+                      <a href="#Zitting%3Aheeft%20aanwezige%20bij%20start">heeft aanwezige bij start</a>, 
+                      <a href="#Zitting%3Aheeft%20notulen">heeft notulen</a>, 
+                      <a href="#Zitting%3Aheeft%20secretaris">heeft secretaris</a>, 
+                      <a href="#Zitting%3Aheeft%20voorzitter">heeft voorzitter</a>, 
+                      <a href="#Zitting%3Aheeft%20zittingsverslag">heeft zittingsverslag</a>, 
+                      <a href="#Zitting%3Ais%20gehouden%20door">is gehouden door</a>, 
+                      <a href="#Zitting%3Aop%20locatie">op locatie</a>.</dd>
+                    
+                  </dl>
+                </div>
+                
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Zitting%3Abehandelt" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#behandelt">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#behandelt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#behandelt" data-placement="right">
+                            behandelt</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-placement="right">Agendapunt</a></td>
+                        <td>1...*</td>
+                        <td property="rdfs:comment">Een formeel vastgelegd agendapunt van de zitting.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zitting%3Ageplande%20start" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#geplandeStart">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#geplandeStart" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#geplandeStart" data-placement="right">
+                            geplande start</a>
                           </code>
                         </td>
                         <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
                         <td>1</td>
-                        <td property="rdfs:comment">Het einde van de periode waarover de versie gedefinieerd is.</td>
+                        <td property="rdfs:comment">Het tijdstip waarop de zitting gepland is om te beginnen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
-                      
+                    
+                      <tr id="Zitting%3Agestart%20op%20tijdstip" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#startedAtTime">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/prov#startedAtTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#startedAtTime" data-placement="right">
+                            gestart op tijdstip</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Tijdstip waarop de zitting begint.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zitting%3Age%C3%ABindigd%20op%20tijdstip" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#endedAtTime">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/prov#endedAtTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#endedAtTime" data-placement="right">
+                            geëindigd op tijdstip</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Tijdstip waarop de zitting eindigt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zitting%3Aheeft%20aanwezige%20bij%20start" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftAanwezigeBijStart">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftAanwezigeBijStart" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftAanwezigeBijStart" data-placement="right">
+                            heeft aanwezige bij start</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>1...*</td>
+                        <td property="rdfs:comment">Een mandataris (van het bestuursorsgaan die de zitting hield) die aanwezig was bij de start van de zitting.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zitting%3Aheeft%20notulen" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftNotulen">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftNotulen" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftNotulen" data-placement="right">
+                            heeft notulen</a>
+                          </code>
+                        </td>
+                        <td><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">De formele notulen van de zitting.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zitting%3Aheeft%20secretaris" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftSecretaris">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftSecretaris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftSecretaris" data-placement="right">
+                            heeft secretaris</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De mandataris die de rol van secretaris heeft gedurende de zitting.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zitting%3Aheeft%20voorzitter" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftVoorzitter">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftVoorzitter" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftVoorzitter" data-placement="right">
+                            heeft voorzitter</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/mandaat#Mandataris" data-placement="right">Mandataris</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De mandataris die de rol als voorzitter heeft gedurende de zitting.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zitting%3Aheeft%20zittingsverslag" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#heeftZittingsverslag">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#heeftZittingsverslag" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#heeftZittingsverslag" data-placement="right">
+                            heeft zittingsverslag</a>
+                          </code>
+                        </td>
+                        <td><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een verslag van de zitting.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zitting%3Ais%20gehouden%20door" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#isGehoudenDoor">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/besluit#isGehoudenDoor" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#isGehoudenDoor" data-placement="right">
+                            is gehouden door</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Bestuursorgaan" data-placement="right">Bestuursorgaan</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Duidt aan door welk orgaan de zitting is gehouden.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zitting%3Aop%20locatie" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#atLocation">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/prov#atLocation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#atLocation" data-placement="right">
+                            op locatie</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/ns/prov#Location" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Location" data-placement="right">Locatie</a></td>
+                        <td>0...1</td>
+                        <td property="rdfs:comment">Locatie waar de zitting plaatsvindt. Doorgaans is dit een zaal in een gebouw.</td>
+                        <td property="vann:usageNote">Wegens digitale vergaderingen, locaties zonder URI of gebrek aan eenduidigheid (bvb: blank node met naam &#34;Zaal 1B&#34;) zorgen dat deze eigenschap niet verplicht is.</td>
+                        <td></td>
+                      </tr>
+                    
                     </tbody>
                   </table>
                 </div>
-                
+      			  
             </div>
             
+
             
             <div class="region region--no-space-top" id="jsonld">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
                 
-<p>Een herbruikbare JSON-LD context definitie voor dit applicatieprofiel is terug te vinden op: <a href="https://data.vlaanderen.be/context/mandatendatabank.jsonld" target="_blank">https://data.vlaanderen.be/context/mandatendatabank.jsonld</a></p>
+<p>Een herbruikbare JSON-LD context definitie voor dit applicatieprofiel is terug te vinden op: <a href="https://data.vlaanderen.be/context/besluit-publicatie.jsonld" target="_blank">https://data.vlaanderen.be/context/besluit-publicatie.jsonld</a></p>
 
             </div>
           </div>
