@@ -33,7 +33,3 @@ ns1:KandidatenlijstLijsttype
   rdf:type skos:ConceptScheme ;
   ns4:modified "2018-03-21"^^xsd:date ;
   skos:prefLabel "Kandidatenlijst lijsttype" .
-ns1:BesluitType
-  rdf:type skos:ConceptScheme ;
-  ns4:modified "2019-08-01"^^xsd:date ;
-  skos:prefLabel "Besluittype" .
