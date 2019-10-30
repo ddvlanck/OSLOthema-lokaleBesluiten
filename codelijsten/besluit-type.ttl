@@ -2,7 +2,7 @@
 <https://data.vlaanderen.be/id/concept/BesluitType/0d1278af-b69e-4152-a418-ec5cfd1c7d0b> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot vaststelling of wijziging van een aanvullend reglement van de politie op het wegverkeer op gemeentewegen die in speciale beschermingszones gelegen zijn.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad of van het college van burgemeester en schepenen dat de politie op het wegverkeer regelt op gemeentewegen die in speciale beschermingszones gelegen zijn.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Aanvullend reglement op het wegverkeer m.b.t. gemeentewegen in speciale beschermingszones" .
 
@@ -16,7 +16,7 @@
 <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad of het college van burgemeester en schepenen dat de politie op het wegverkeer regelt.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van het college van burgemeester en schepenen dat tijdelijk de politie op het wegverkeer regelt.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Tijdelijke politieverordening (op het wegverkeer)" .
 
@@ -29,7 +29,7 @@
 
 <https://data.vlaanderen.be/id/concept/BesluitType/2f189152-1786-4b55-a3a9-d7f06de63f1c> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot vaststelling of aanpassing van het meerjarenplan conform BBC2020.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit tot vaststelling van het meerjarenplan of tot vaststelling van de aanpassing van het meerjarenplan conform BBC2020.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Meerjarenplan(aanpassing) BBC2020";
   <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.vlaanderen.be/id/conceptscheme/BesluitType> .
@@ -58,13 +58,13 @@
 <https://data.vlaanderen.be/id/concept/BesluitType/3bba9f10-faff-49a6-acaa-85af7f2199a3> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot vaststelling of wijziging van een aanvullend reglement van de politie op het wegverkeer op gemeentewegen die in havengebied gelegen zijn.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad of van het college van burgemeester en schepenen dat de politie op het wegverkeer regelt op gemeentewegen die in havengebied gelegen zijn.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Aanvullend reglement op het wegverkeer m.b.t. gemeentewegen in havengebied" .
 
 <https://data.vlaanderen.be/id/concept/BesluitType/3fcf7dba-2e5b-4955-a489-6dd8285c013b> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad over de vastelling of de aanpassing van het meerjarenplan van een eredienstbestuur.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad over de vaststelling van het meerjarenplan of over de vaststelling van de aanpassing van het meerjarenplan van een eredienstbestuur.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Besluit over meerjarenplan(aanpassing) eredienstbestuur";
   <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.vlaanderen.be/id/conceptscheme/BesluitType> .
@@ -100,14 +100,14 @@
 <https://data.vlaanderen.be/id/concept/BesluitType/4673d472-8dbc-4cea-b3ab-f92df3807eb3> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit ??? (? Besluit over personeelsaangelegenheden.)";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit tot vaststelling of wijziging van een personeelsreglement.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Personeelsreglement" .
 
 <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad of van het college van burgemeester en schepenen tot vaststelling of wijziging van een aanvullend reglement van de politie op het wegverkeer op gemeentewegen die niet in havengebied of speciale beschermingszones gelegen zijn.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad of van het college van burgemeester en schepenen dat de politie op het wegverkeer regelt op gemeentewegen die niet in havengebied of speciale beschermingszones gelegen zijn.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Aanvullend reglement op het wegverkeer enkel m.b.t. gemeentewegen (niet in havengebied of speciale beschermingszones)" .
 
@@ -191,7 +191,7 @@
 <https://data.vlaanderen.be/id/concept/BesluitType/7d95fd2e-3cc9-4a4c-a58e-0fbc408c2f9b> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot vaststelling of wijziging van een aanvullend reglement van de politie op het wegverkeer op gewestwegen.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad of van het college van burgemeester en schepenen dat de politie op het wegverkeer regelt op gewestwegen.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Aanvullend reglement op het wegverkeer m.b.t. één of meerdere gewestwegen" .
 
@@ -227,7 +227,7 @@ provinciebedrijf.""";
 <https://data.vlaanderen.be/id/concept/BesluitType/84121221-4217-40e3-ada2-cd1379b168e1> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit met een reglementair of verordenend karakter dat geen aanvullend reglement van de politie op het wegverkeer inhoudt, noch een belasting- of retributiereglement, noch een delegatiereglemen, noch een deontologische code, noch een gebruikersreglement, noch een huishoudelijk reglement, noch een personeelsreglement, noch een politiereglement, noch een reglement onderwijs, noch een noch een reglement over subsidie, premie of erkenning, noch een tijdelijke politieverordening op het wegverkeer.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit met een reglementair of verordenend karakter dat geen aanvullend reglement van de politie op het wegverkeer inhoudt, noch een belasting- of retributiereglement, noch een delegatiereglement, noch een deontologische code, noch een gebruikersreglement, noch een huishoudelijk reglement, noch een personeelsreglement, noch een politiereglement, noch een reglement onderwijs, noch een reglement over subsidie, premie of erkenning, noch een tijdelijke politieverordening op het wegverkeer.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere" .
 
@@ -284,7 +284,7 @@ gemeentebedrijf.""";
 <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot heffing of wijziging van een retributie.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad of van het college van burgemeester en schepenen tot heffing, wijziging of opheffing van een retributie.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Retributiereglement" .
 
@@ -312,7 +312,7 @@ gemeentebedrijf.""";
 <https://data.vlaanderen.be/id/concept/BesluitType/d7060f97-c417-474c-abc6-ef006cb61f41> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad of het college van burgemeester en schepenen dat handelt over een subsidie, premie of erkenning.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad of van het college van burgemeester en schepenen dat handelt over een subsidie, premie of erkenning.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Subsidie, premie, erkenning" .
 
@@ -332,7 +332,7 @@ gemeentebedrijf.""";
 
 <https://data.vlaanderen.be/id/concept/BesluitType/df261490-cc74-4f80-b783-41c35e720b46> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad over de vaststelling of de wijziging van het budget van een eredienstbestuur.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad over de vaststelling van het budget of over de vaststelling van de wijziging van het budget van een eredienstbestuur.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Besluit over budget(wijziging) eredienstbestuur";
   <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.vlaanderen.be/id/conceptscheme/BesluitType> .
@@ -360,7 +360,7 @@ gemeentebedrijf.""";
 
 <https://data.vlaanderen.be/id/concept/BesluitType/e44c535d-4339-4d15-bdbf-d4be6046de2c> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit tot vaststelling of aanpassing van de jaarrekening.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit tot vaststelling van de jaarrekening.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Jaarrekening";
   <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.vlaanderen.be/id/conceptscheme/BesluitType> .
@@ -431,13 +431,34 @@ gemeentebedrijf.""";
 <https://data.vlaanderen.be/id/concept/BesluitType/efa4ec5a-b006-453f-985f-f986ebae11bc> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot heffing of wijziging van een belasting.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot heffing, wijziging of opheffing van een belasting.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Belastingreglement" .
 
+<https://data.vlaanderen.be/id/concept/BesluitType/b2d0734d-13d0-44b4-9af8-1722933c5288> a <http://www.w3.org/2004/02/skos/core#Concept>,
+    <http://www.w3.org/2000/01/rdf-schema#Class>;
+  <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/efa4ec5a-b006-453f-985f-f986ebae11bc>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot heffing, wijziging of opheffing van een aanvullende belasting of opcentiem.";
+  <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Aanvullende belasting of opcentiem" .
+
+<https://data.vlaanderen.be/id/concept/BesluitType/4c22ef0a-f808-41dd-9c9f-2aff17fd851f> a <http://www.w3.org/2004/02/skos/core#Concept>,
+    <http://www.w3.org/2000/01/rdf-schema#Class>;
+  <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/efa4ec5a-b006-453f-985f-f986ebae11bc>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot heffing, wijziging of opheffing van een contantbelasting.";
+  <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Contantbelasting" .
+
+<https://data.vlaanderen.be/id/concept/BesluitType/8597e056-b96d-4213-ad4c-37338f2aaf35> a <http://www.w3.org/2004/02/skos/core#Concept>,
+    <http://www.w3.org/2000/01/rdf-schema#Class>;
+  <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/efa4ec5a-b006-453f-985f-f986ebae11bc>;
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit van de gemeenteraad tot heffing, wijziging of opheffing van een kohierbelasting.";
+  <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Kohierbelasting" .
+
 <https://data.vlaanderen.be/id/concept/BesluitType/f56c645d-b8e1-4066-813d-e213f5bc529f> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
-  <http://www.w3.org/2004/02/skos/core#definition> "Besluit tot vaststelling of aanpassing van het meerjarenplan.";
+  <http://www.w3.org/2004/02/skos/core#definition> "Besluit tot vaststelling van het meerjarenplan of tot vaststelling van de aanpassing van het meerjarenplan.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Meerjarenplan(aanpassing)";
   <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.vlaanderen.be/id/conceptscheme/BesluitType> .
