@@ -468,14 +468,14 @@ gemeentebedrijf.""";
   <http://www.w3.org/2004/02/skos/core#definition> "Besluit tot vaststelling van het meerjarenplan.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Vaststelling van meerjarenplan";
-  <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/f56c645d-b8e1-4066-813d-e213f5bc529f>;
+  <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/f56c645d-b8e1-4066-813d-e213f5bc529f> .
 
 <https://data.vlaanderen.be/id/concept/BesluitType/23735395-a487-4f0b-9ffa-f8ee1d3cd84f> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
   <http://www.w3.org/2004/02/skos/core#definition> "Besluit tot vaststelling van de aanpassing van het meerjarenplan.";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Vaststelling van meerjarenplanaanpassing";
-  <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/f56c645d-b8e1-4066-813d-e213f5bc529f>;
+  <http://www.w3.org/2004/02/skos/core#broader> <https://data.vlaanderen.be/id/concept/BesluitType/f56c645d-b8e1-4066-813d-e213f5bc529f> .
 
 <https://data.vlaanderen.be/id/concept/BesluitType/f8c070bd-96e4-43a1-8c6e-532bcd771251> a <http://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/2000/01/rdf-schema#Class>;
