@@ -512,9 +512,22 @@ gemeentebedrijf.""";
   <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
   <http://www.w3.org/2004/02/skos/core#prefLabel> "Gebruikersreglement" .
 
+<https://data.vlaanderen.be/id/concept/BesluitType/fece1b0e-1746-4d32-8dd8-052e073da388> a <http://www.w3.org/2004/02/skos/core#Concept>,
+    <http://www.w3.org/2000/01/rdf-schema#Class>;
+  <http://www.w3.org/2004/02/skos/core#definition> "De regelgeving, rechtshandeling en/of beleidskeuze waardoor de invulling van een of meerdere mandaten door een persoon vanaf een bepaalde datum (tijdelijk) start.";
+  <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Aanstelling mandataris" .
+
+<https://data.vlaanderen.be/id/concept/BesluitType/f0a616c9-7e96-4dd1-ba5b-14f5f1fa6abb> a <http://www.w3.org/2004/02/skos/core#Concept>,
+    <http://www.w3.org/2000/01/rdf-schema#Class>;
+  <http://www.w3.org/2004/02/skos/core#definition> "De regelgeving, rechtshandeling en/of beleidskeuze waardoor de invulling van één of meerdere mandaten door een persoon vanaf een bepaalde datum (tijdelijk) beëindigd wordt.";
+  <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Beëindiging mandataris" .
+
 <https://data.vlaanderen.be/id/conceptscheme/BesluitType> a <http://www.w3.org/2004/02/skos/core#ConceptScheme>;
   <http://www.w3.org/2004/02/skos/core#definition> "Het type van de rechtsgrond. Bijvoorbeeld: reglement, wet, voorstel.";
   <http://www.w3.org/2004/02/skos/core#prefLabel> "besluit type" .
+
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
