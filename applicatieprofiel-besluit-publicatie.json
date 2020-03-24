@@ -32,7 +32,12 @@
       "waarde" : "https://lokaalbestuur.vlaanderen.be/sites/default/files/public/in_de_kijker/lblod/LBLOD_WS3_procesGeneriekMandaten_verslag.pdf"
     }
   ],
-  "presentaties": [],
+  "presentaties": [
+    {
+      "naam" : "Webinar Besluit",
+      "waarde" : "https://www.youtube.com/watch?v=A7YDqh36hzY"
+    }
+  ],
   "functioneel_toepassingsgebied": "Semantische standaard voor het publiceren van lokale besluiten als Linked Open Data.",
   "organisatorisch_werkingsgebied": "alle entiteiten van de Vlaamse overheid",
   "datum_van_aanmelding": "10 April 2018 (retroactief)",
